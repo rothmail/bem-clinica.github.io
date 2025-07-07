@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clínica</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">Clínica Viva Bem</div>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+        <nav id="menu">
+            <a href="#hero">Início</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#planos">Planos</a>
+
+            <div class="dropdown">
+                <a href="#">Especialidades</a>
+
+                <div class="dropdown-content">
+                    <a href="assets/html/especialistas.html">Clínico Geral</a>
+                    <a href="assets/html/especialistas.html">Pediatria</a>
+                    <a href="assets/html/especialistas.html">Neurologia</a>
+                    <a href="assets/html/especialistas.html">Cardiologia</a>
+                    <a href="assets/html/especialistas.html">Ortopedia</a>
+                </div>
+            </div>
+
+            <a onclick="showOverlay('contact')">Contato</a>
+            <a onclick="showOverlay('login')">Login</a>
+        </nav>
+    </header>
+
+    <section id="hero" class="hero">
+        <h1>Bem-vindo à Clínica Viva Bem</h1>
+        <p>Cuidando da sua saúde com carinho e tecnologia.</p><br>
+        <a class="btn">Saiba mais</a>
+    </section>
+
+    <section id="servicos" class="section">
+        <h2>Nossos Serviços</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Consultas Gerais</h3>
+
+                <p>Atendimento com médicos clínicos e especialistas.</p>
+            </div>
+
+            <div class="card">
+                <h3>Vacinação</h3>
+
+                <p>Vacinas para todas as idades com segurança e confiança.</p>
+            </div>
+
+            <div class="card">
+                <h3>Exames</h3>
+                <p>Laboratório completo para diagnósticos precisos.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="planos" class="section">
+        <h2>Planos e Preços</h2>
+
+        <table class="tabela-planos">
+            <thead>
+                <tr>
+                    <th>Plano</th>
+                    <th>Básico<br><span class="preco">R$ 200</span></th>
+                    <th>Completo<br><span class="preco">R$ 500</span></th>
+                    <th>Premium<br><span class="preco">R$ 900</span></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td><strong>Descrição</strong></td>
+
+                    <td>Ideal para quem busca acompanhamento pontual com qualidade.</td>
+                    <td>Perfeito para quem quer um cuidado mais completo e contínuo.</td>
+                    <td>Nosso plano mais completo para quem prioriza saúde e bem-estar integral.</td>
+                </tr>
+
+                <tr>
+                    <td><strong>Inclui</strong></td>
+
+                    <td>
+                        <ul>
+                            <li>✔ Consultas médicas</li>
+                            <li>✔ Acesso a clínico geral</li>
+                            <li>✔ Descontos em exames laboratoriais</li>
+                            <li>✔ Prontuário digital</li>
+                        </ul>
+                    </td>
+
+                    <td>
+                        <ul>
+                            <li>✔ Tudo do plano Básico</li>
+                            <li>✔ Consultas com especialistas (2 por mês)</li>
+                            <li>✔ Acompanhamento nutricional ou psicológico</li>
+                            <li>✔ Retorno garantido em até 15 dias</li>
+                            <li>✔ Suporte por WhatsApp em horário comercial</li>
+                        </ul>
+                    </td>
+
+                    <td>
+                        <ul>
+                            <li>✔ Tudo do plano Completo</li>
+                            <li>✔ Atendimento emergencial 24h</li>
+                            <li>✔ Consultas ilimitadas com especialistas</li>
+                            <li>✔ Check-up anual completo</li>
+                            <li>✔ Telemedicina ilimitada</li>
+                            <li>✔ Acompanhamento multidisciplinar</li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><strong>Não Inclui</strong></td>
+
+                    <td>
+                        <ul>
+                            <li>✘ Especialistas</li>
+                            <li>✘ Urgência e emergência</li>
+                            <li>✘ Atendimento fora do horário comercial</li>
+                        </ul>
+                    </td>
+
+                    <td>
+                        <ul>
+                            <li>✘ Atendimento emergencial 24h</li>
+                            <li>✘ Internações ou cirurgias</li>
+                        </ul>
+                    </td>
+
+                    <td>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <button class="btn" onclick="showOverlay('subscribe')">Assinar Plano</button>
+    </section>
+
+    <section class="section">
+        <h2>Sobre Nós</h2>
+
+        <p>
+            A Clínica Viva Bem foi fundada com o propósito de oferecer atendimento médico humanizado e de qualidade. Nossa equipe é composta por profissionais altamente qualificados que prezam pelo bem-estar dos nossos pacientes. Buscamos constantemente inovação e tecnologia para garantir diagnósticos precisos e tratamentos eficazes.
+        </p>
+    </section>
+
+    <div id="loginOverlay" class="overlay">
+        <div class="overlay-content">
+            <h3>Cadastro</h3>
+
+            <input type="text" placeholder="Nome completo" required>
+            <input type="date" placeholder="Data de nascimento" id="birthdate" required>
+            <input type="email" placeholder="E-mail" required>
+            <input type="password" placeholder="Senha" required>
+            <input type="password" placeholder="Confirmar senha" required>
+
+            <button onclick="validateAge()">Cadastrar</button>
+            <button onclick="closeOverlay('login')">Voltar</button>
+        </div>
+    </div>
+
+    <div id="contactOverlay" class="overlay">
+        <div class="overlay-content">
+            <h3>Fale Conosco</h3>
+
+            <input type="text" placeholder="Nome" required>
+            <input type="email" placeholder="E-mail" required>
+            <textarea placeholder="Mensagem" rows="5"></textarea>
+
+            <button onclick="closeOverlay('contact')">Enviar</button>
+            <button onclick="closeOverlay('contact')">Voltar</button>
+        </div>
+    </div>
+
+    <div id="subscribeOverlay" class="overlay">
+        <div class="overlay-content">
+            <h3>Assinar Plano</h3>
+
+            <input type="text" placeholder="Nome completo" id="subName" required>
+            <input type="email" placeholder="E-mail" id="subEmail" required>
+
+            <select id="subPlan" required>
+                <option value="">Selecione um plano</option>
+                <option value="basico">Básico - R$200</option>
+                <option value="completo">Completo - R$500</option>
+                <option value="premium">Premium - R$900</option>
+            </select><br>
+
+            <button onclick="validateSubscription()">Confirmar Assinatura</button>
+
+            <button onclick="closeOverlay('subscribe')">Voltar</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Estar Clínica. Amanda Piovesana e Eduardo Bassani Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
