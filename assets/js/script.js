@@ -17,11 +17,9 @@ function validateAge() {
     const today = new Date();
     const age = today.getFullYear() - birth.getFullYear();
     const month = today.getMonth() - birth.getMonth();
-
     if (month < 0 || (month === 0 && today.getDate() < birth.getDate())) {
         age--;
     }
-
     if (age < 18) {
         alert("Você precisa ter pelo menos 18 anos para se cadastrar.");
     } else {
@@ -41,7 +39,6 @@ function validateSubscription() {
     }
 
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
     if (!emailPattern.test(email)) {
         alert('Por favor, insira um e-mail válido.');
         return;
@@ -51,23 +48,22 @@ function validateSubscription() {
     alert('Assinatura confirmada com sucesso!');
 }
 
-function validateSubscription() {
-    const name = document.getElementById('subName').value.trim();
-    const email = document.getElementById('subEmail').value.trim();
-    const plan = document.getElementById('subPlan').value;
+function validateContact() {
+    const name = document.getElementById('input-name').value.trim();
+    const email = document.getElementById('input-email').value.trim();
+    const area = document.getElementById('messenge-area').value.trim();
 
-    if (name === '' || email === '' || plan === '') {
+    if (name === '' || email === '' || area === '') {
         alert('Por favor, preencha todos os campos corretamente.');
         return;
     }
 
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
     if (!emailPattern.test(email)) {
         alert('Por favor, insira um e-mail válido.');
         return;
     }
 
-    closeOverlay('subscribe');
-    alert('Assinatura confirmada com sucesso!');
+    closeOverlay('contact');
+    alert('Mensagem enviada com sucesso!');
 }

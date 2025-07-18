@@ -13,15 +13,12 @@
     <header>
         <div class="logo">Clínica Viva Bem</div>
         <div class="hamburger" onclick="toggleMenu()">☰</div>
-
         <nav id="menu">
             <a href="#hero">Início</a>
             <a href="#servicos">Serviços</a>
             <a href="#planos">Planos</a>
-
             <div class="dropdown">
                 <a href="#">Especialidades</a>
-
                 <div class="dropdown-content">
                     <a href="assets/html/especialistas.html">Clínico Geral</a>
                     <a href="assets/html/especialistas.html">Pediatria</a>
@@ -30,7 +27,6 @@
                     <a href="assets/html/especialistas.html">Ortopedia</a>
                 </div>
             </div>
-
             <a onclick="showOverlay('contact')">Contato</a>
             <a onclick="showOverlay('login')">Login</a>
         </nav>
@@ -39,7 +35,7 @@
     <section id="hero" class="hero">
         <h1>Bem-vindo à Clínica Viva Bem</h1>
         <p>Cuidando da sua saúde com carinho e tecnologia.</p><br>
-        <a class="btn">Saiba mais</a>
+        <a href="assets/html/especialistas.html" class="a-consulta">Consulte-se</a>
     </section>
 
     <section id="servicos" class="section">
@@ -47,16 +43,12 @@
         <div class="cards">
             <div class="card">
                 <h3>Consultas Gerais</h3>
-
                 <p>Atendimento com médicos clínicos e especialistas.</p>
             </div>
-
             <div class="card">
                 <h3>Vacinação</h3>
-
                 <p>Vacinas para todas as idades com segurança e confiança.</p>
             </div>
-
             <div class="card">
                 <h3>Exames</h3>
                 <p>Laboratório completo para diagnósticos precisos.</p>
@@ -66,7 +58,6 @@
 
     <section id="planos" class="section">
         <h2>Planos e Preços</h2>
-
         <table class="tabela-planos">
             <thead>
                 <tr>
@@ -76,28 +67,23 @@
                     <th>Premium<br><span class="preco">R$ 900</span></th>
                 </tr>
             </thead>
-
             <tbody>
                 <tr>
                     <td><strong>Descrição</strong></td>
-
                     <td>Ideal para quem busca acompanhamento pontual com qualidade.</td>
                     <td>Perfeito para quem quer um cuidado mais completo e contínuo.</td>
                     <td>Nosso plano mais completo para quem prioriza saúde e bem-estar integral.</td>
                 </tr>
-
                 <tr>
                     <td><strong>Inclui</strong></td>
-
                     <td>
                         <ul>
-                            <li>✔ Consultas médicas</li>
+                            <li>✔ 1 consulta médica por mês</li>
                             <li>✔ Acesso a clínico geral</li>
                             <li>✔ Descontos em exames laboratoriais</li>
                             <li>✔ Prontuário digital</li>
                         </ul>
                     </td>
-
                     <td>
                         <ul>
                             <li>✔ Tudo do plano Básico</li>
@@ -107,7 +93,6 @@
                             <li>✔ Suporte por WhatsApp em horário comercial</li>
                         </ul>
                     </td>
-
                     <td>
                         <ul>
                             <li>✔ Tudo do plano Completo</li>
@@ -119,10 +104,8 @@
                         </ul>
                     </td>
                 </tr>
-
                 <tr>
                     <td><strong>Não Inclui</strong></td>
-
                     <td>
                         <ul>
                             <li>✘ Especialistas</li>
@@ -130,41 +113,38 @@
                             <li>✘ Atendimento fora do horário comercial</li>
                         </ul>
                     </td>
-
                     <td>
                         <ul>
                             <li>✘ Atendimento emergencial 24h</li>
                             <li>✘ Internações ou cirurgias</li>
                         </ul>
                     </td>
-
                     <td>
                     </td>
                 </tr>
             </tbody>
         </table>
-
         <button class="btn" onclick="showOverlay('subscribe')">Assinar Plano</button>
     </section>
 
     <section class="section">
         <h2>Sobre Nós</h2>
-
         <p>
-            A Clínica Viva Bem foi fundada com o propósito de oferecer atendimento médico humanizado e de qualidade. Nossa equipe é composta por profissionais altamente qualificados que prezam pelo bem-estar dos nossos pacientes. Buscamos constantemente inovação e tecnologia para garantir diagnósticos precisos e tratamentos eficazes.
+            A Clínica Viva Bem foi fundada com o propósito de oferecer atendimento médico humanizado e de qualidade.
+            Nossa equipe é composta por profissionais altamente qualificados que prezam pelo bem-estar dos nossos
+            pacientes. Buscamos constantemente inovação e tecnologia para garantir diagnósticos precisos e tratamentos
+            eficazes.
         </p>
     </section>
 
     <div id="loginOverlay" class="overlay">
         <div class="overlay-content">
             <h3>Cadastro</h3>
-
             <input type="text" placeholder="Nome completo" required>
             <input type="date" placeholder="Data de nascimento" id="birthdate" required>
             <input type="email" placeholder="E-mail" required>
             <input type="password" placeholder="Senha" required>
             <input type="password" placeholder="Confirmar senha" required>
-
             <button onclick="validateAge()">Cadastrar</button>
             <button onclick="closeOverlay('login')">Voltar</button>
         </div>
@@ -173,33 +153,27 @@
     <div id="contactOverlay" class="overlay">
         <div class="overlay-content">
             <h3>Fale Conosco</h3>
-
-            <input type="text" placeholder="Nome" required>
-            <input type="email" placeholder="E-mail" required>
-            <textarea placeholder="Mensagem" rows="5"></textarea>
-
-            <button onclick="closeOverlay('contact')">Enviar</button>
-            <button onclick="closeOverlay('contact')">Voltar</button>
+            <input id="input-name" type="text" placeholder="Nome" required>
+            <input id="input-email" type="email" placeholder="E-mail" required>
+            <textarea id="messenge-area" placeholder="Mensagem" rows="5"></textarea>
+            <button class="contact-btn" onclick="validateContact()">Enviar</button>
+            <button class="contact-btn" onclick="closeOverlay('contact')">Voltar</button>
         </div>
     </div>
 
     <div id="subscribeOverlay" class="overlay">
         <div class="overlay-content">
             <h3>Assinar Plano</h3>
-
             <input type="text" placeholder="Nome completo" id="subName" required>
             <input type="email" placeholder="E-mail" id="subEmail" required>
-
             <select id="subPlan" required>
                 <option value="">Selecione um plano</option>
                 <option value="basico">Básico - R$200</option>
                 <option value="completo">Completo - R$500</option>
                 <option value="premium">Premium - R$900</option>
             </select><br>
-
-            <button onclick="validateSubscription()">Confirmar Assinatura</button>
-
-            <button onclick="closeOverlay('subscribe')">Voltar</button>
+            <button class="enter-btn" onclick="validateSubscription()">Confirmar Assinatura</button>
+            <button class="enter-btn" onclick="closeOverlay('subscribe')">Voltar</button>
         </div>
     </div>
 
