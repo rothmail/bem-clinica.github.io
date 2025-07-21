@@ -1,5 +1,6 @@
 :root {
     --azul: #4DA6FF;
+    --azul-escuro: #2b7dd0;
     --fundo-texto: #dfecff;
     --azul-claro: #b5d4ee;
     --preto: #1a1a1a;
@@ -19,7 +20,7 @@ body {
 }
 
 header {
-    background-color: var(--azul);
+    background-color: var(--preto);
     padding: 1rem 2rem;
     color: var(--fundo-texto);
     display: flex;
@@ -251,6 +252,10 @@ li {
         overflow-x: auto;
         white-space: nowrap;
     }
+}
+
+#about {
+    background-color: var(--azul-escuro);
 }
 
 .footer {
