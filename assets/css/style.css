@@ -116,13 +116,13 @@ section .btn {
 }
 
 .hero {
-    background-image: url('');
+    background-image: url('../../assets/img/header-clinica.png');
     background-repeat: no-repeat;
     background-size: 100%;
     background-color: var(--azul);
     color: white;
     text-align: center;
-    padding: 3rem 1rem;
+    padding: 10rem 1rem;
 }
 
 .hero h1 {
