@@ -199,6 +199,25 @@ section .btn {
     flex-direction: row;
 }
 
+.container-esp {
+    background-color: #8dbbe9;
+    margin-top: 20%;
+    border-radius: 10px;
+    height: 33%;
+    width: 80%;
+}
+
+.container-esp section {
+    background-color: #b3d1ed;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    margin: 10px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
 section div p {
     display: flex;
     flex-direction: column;
@@ -269,6 +288,10 @@ li {
     color: var(--azul);
     text-decoration: none;
     margin: 0 1rem;
+}
+
+.footer-p {
+    font-size: 12px;
 }
 
 .overlay {
