@@ -7,7 +7,7 @@
     <title>Clínica</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/blog/">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 
 <body>
@@ -17,35 +17,34 @@
         <nav id="menu">
             <a href="#hero">Início</a>
             <a href="#servicos">Serviços</a>
-            <a href="./assets/html/especialistas.html"></a>
+            <a href="../../assets/html/especialistas.html">Especialidades</a>
             <a href="#planos">Planos</a>
             </div>
             <a onclick="showOverlay('contact')">Contato</a>
-            <a onclick="showOverlay('login')">Cadastro</a>
         </nav>
     </header>
 
     <section id="hero" class="hero">
         <h1>Bem-vindo à Clínica Viva Bem</h1>
         <p>Cuidando da sua saúde com carinho e tecnologia.</p><br>
-        <a href="assets/html/especialistas.html" class="a-consulta">Consulte-se</a>
+        <a href="../../assets/html/especialistas.html" class="a-consulta">Consulte-se</a>
     </section>
 
     <section id="servicos" class="section">
         <h2>Nossos Serviços</h2>
         <div class="cards">
             <div id="card-consultas" class="card">
-                <img src="assets/img/card-consultas.webp" alt="sem direitos autorais">
+                <img class="img-servicos" src="../../assets/img/card-consultas.webp" alt="sem direitos autorais">
                 <h3>Consultas Gerais</h3>
                 <p>Atendimento com médicos clínicos e especialistas.</p>
             </div>
             <div id="card-vacinas" class="card">
-                <img src="assets/img/card-vacinas.jpeg" alt="">
+                <img class="img-servicos" src="../../assets/img/card-vacinas.jpeg" alt="">
                 <h3>Vacinação</h3>
                 <p>Vacinas para todas as idades com segurança e confiança.</p>
             </div>
             <div id="card-exame" class="card">
-                <img src="assets/img/card-exames.jpg" alt="">
+                <img class="img-servicos" src="../../assets/img/card-exames.jpg" alt="">
                 <h3>Exames</h3>
                 <p>Laboratório completo para diagnósticos precisos.</p>
             </div>
@@ -158,19 +157,6 @@
         </p>
     </section>
 
-    <div id="loginOverlay" class="overlay">
-        <div class="overlay-content">
-            <h3>Cadastro</h3>
-            <input type="text" placeholder="Nome completo" required>
-            <input type="date" placeholder="Data de nascimento" id="birthdate" required>
-            <input type="email" placeholder="E-mail" required>
-            <input type="password" placeholder="Senha" required>
-            <input type="password" placeholder="Confirmar senha" required>
-            <button class="login-btn" onclick="validateAge()">Cadastrar</button>
-            <button class="login-btn" onclick="closeOverlay('login')">Voltar</button>
-        </div>
-    </div>
-
     <div id="contactOverlay" class="overlay">
         <div class="overlay-content">
             <h3>Fale Conosco</h3>
@@ -203,8 +189,7 @@
             os direitos reservados.</p>
     </footer>
 
-    <script src="../assets/dist/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
-    <script src="assets/js/script.js"></script>
+    <script src="../../assets/js/script.js"></script>
 </body>
 
 </html>
